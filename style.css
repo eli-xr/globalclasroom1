@@ -1,6 +1,7 @@
 
 h1{
     text-align: center;
+    margin-top:20px;
     
 }
 .navbar ul{
@@ -28,8 +29,8 @@ body {
   padding: 0;
   width:100%;
   height:100%;
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #fcebe6;
   align-items: center;
 }
 
@@ -136,8 +137,8 @@ input[type="submit"]:hover {
 }
 .about-page {
   padding: 40px 20px;
-  background-color: #fff;
-  color: #333;
+  background-color:#fcebe6;
+  color:coral;
 }
 
 .about-hero {
@@ -163,12 +164,12 @@ input[type="submit"]:hover {
     text-align:center;
 }
 .slider-container{
-  width: 90%;
-  max-width: 800px;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   overflow:hidden;
   position:relative;
-  height: 250px;
+  height: 200px;
 }
 .image-slider{
   max-width:1000px;
@@ -177,10 +178,19 @@ input[type="submit"]:hover {
   transition: transform 0.5s ease-in-out;
 }
 .image-slider img{
-  width:300px;
-  height: 250px;
+  width: 100px;
+  height: 200px;
   flex-shrink:0;
   object-fit:cover;
+}
+@media (max-width: 768px) {
+  .slider-container {
+    height: 150px;
+  }
+
+  .image-slider img {
+    height: 150px;
+  }
 }
 
 @keyframes image-slider {
@@ -273,3 +283,155 @@ input[type="submit"]:hover {
   background-color: #f5f5f5;
 }
 
+.video-section{
+  display: flex;
+  justify-content: center;
+  align-items: centre;
+  min-height: 100vh;
+
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  width: 80%;
+  max-width: 800px;
+}
+
+video {
+  width: 60%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-section {
+  padding: 40px 20px;
+  background-color: #fcebe6; /* light coral background */
+  text-align: center;
+  
+}
+.testimonial-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* prevents wrapping */
+  overflow-x: auto;   /* enables horizontal scroll */
+  gap: 30px;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+
+.testimonial-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  max-width: 300px;
+  width: 100%;
+  color: coral;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 280px; /* fixed width for horizontal layout */
+  text-align: left;
+
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px rgb(0,0,0, 0.15);
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 2px solid coral;
+}
+
+.testimonial-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: coral;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  color: #444;
+  Line-height: 1.5;
+  color: coral;
+}
+.testimonial-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.testimonial-container::-webkit-scrollbar-thumb {
+  background-color: coral;
+  border-radius: 4px;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 20px;
+}
+@media (max-width: 1024px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.product-section {
+  padding: 40px 20px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #fcebe6;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit:contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.product-card h3 {
+  font-size: 1rem;
+  margin: 8px 0;
+  color: coral;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #444;
+}
